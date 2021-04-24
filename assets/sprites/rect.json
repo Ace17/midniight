@@ -1,0 +1,35 @@
+{
+  "type" : "sheet",
+  "rows" : 1,
+  "cols" : 8,
+  "actions": [
+    {
+      "name": "default",
+      "frames": [ 0, 1 ]
+    },
+    {
+      "name": "hidden",
+      "frames": [ 1 ]
+    },
+    {
+      "name": "conveyor",
+      "frames": [ 2 ]
+    },
+    {
+      "name": "cross",
+      "frames": [ 3 ]
+    },
+    {
+      "name": "hollow",
+      "frames": [ 4 ]
+    },
+    {
+      "name": "mapcell",
+      "frames": [ 5 ]
+    },
+    {
+      "name": "ladder",
+      "frames": [ 6 ]
+    }
+  ]
+}

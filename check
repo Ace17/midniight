@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "----------------------------------------------------------------"
+echo "Reformatting ..."
+scripts/reformat.sh "src"
+
+echo "----------------------------------------------------------------"
+echo "Checking dependencies ..."
+./scripts/CheckDeps.py -o bin/archi.dot scripts/archi.json src
+
+echo "----------------------------------------------------------------"
+echo "Building native version"
+
+BIN=bin/native \
+  make -j`nproc`
+
+./bin/native/tests.exe
+
+echo "----------------------------------------------------------------"
+echo "Building Windows version"
+
+BIN=bin/w64 \
+  ./scripts/w64-make -j`nproc`
+
+echo OK

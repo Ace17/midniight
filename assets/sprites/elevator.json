@@ -1,0 +1,15 @@
+{
+  "type" : "sheet",
+  "rows" : 2,
+  "cols" : 2,
+  "actions": [
+    {
+      "name": "off",
+      "frames": [ 0, 1 ]
+    },
+    {
+      "name": "on",
+      "frames": [ 2, 3 ]
+    }
+  ]
+}

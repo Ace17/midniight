@@ -1,0 +1,8 @@
+{
+  "type" : "sheet",
+  "rows" : 1,
+  "cols" : 2,
+  "actions": [
+    { "name": "", "frames": [ 0, 1 ] }
+  ]
+}

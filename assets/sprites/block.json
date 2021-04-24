@@ -1,0 +1,23 @@
+{
+  "type" : "sheet",
+  "rows" : 8,
+  "cols" : 8,
+  "actions": [
+    {
+      "name": "hollow",
+      "frames": [ 0 ]
+    },
+    {
+      "name": "crumble",
+      "frames": [ 8 ]
+    },
+    {
+      "name": "crumble",
+      "frames": [ 9, 10, 11, 11, 10, 9 ]
+    },
+    {
+      "name": "fragile",
+      "frames": [ 16 ]
+    }
+  ]
+}
