@@ -36,7 +36,7 @@ struct SdlAudioBackend : IAudioBackend
     desired.freq = SAMPLERATE;
     desired.format = AUDIO_F32SYS;
     desired.channels = 2;
-    desired.samples = 512;
+    desired.samples = 2048;
     desired.callback = &staticMixAudio;
     desired.userdata = this;
 
@@ -78,7 +78,20 @@ struct SdlAudioBackend : IAudioBackend
     Span<float> dst;
     dst.data = (float*)stream;
     dst.len = iNumBytes / sizeof(float);
+
+    if(pThis->audiospec.freq > 22050)
+      dst.len /= 2;
+
     pThis->m_mixer->mixAudio(dst);
+
+    if(pThis->audiospec.freq > 22050)
+    {
+      dst.len *= 2;
+      for(int i=dst.len-1;i >= 0;--i)
+      {
+        dst[i] = dst[i/2];
+      }
+    }
   }
 };
 }
