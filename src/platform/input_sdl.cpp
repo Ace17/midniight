@@ -8,6 +8,7 @@
 
 #include "engine/input.h"
 #include "SDL.h"
+#include <cstdio>
 #include <map>
 
 namespace
